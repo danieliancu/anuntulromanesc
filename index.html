@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>  
+
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+  
+  <style>
+  
+  
+  	body {
+	font-family: 'Raleway', sans-serif;
+    }
+  
+  	:root {
+    	--color:red;
+    }
+    
+    * {
+    	transition: .4s;
+    }
+  
+  	a:hover {
+    	cursor:pointer;
+    }
+  
+  	h1 {
+    	font-size:28px;
+    	text-align:center;
+        color:grey;
+        padding:100px 0px 30px 0px;
+font-family: 'Cinzel', serif;
+text-transform:uppercase;
+letter-spacing:3px;       
+        
+    }
+  
+  
+      .arrows {
+        font-size:48px;
+        color:grey;
+        z-index:10;
+    }
+   
+   .arrowLeft {
+        top:45%;   
+    	position:absolute;
+   		left:-40px;
+   }
+   
+    .arrowRight {
+        top:45%;    
+    	position:absolute;
+    	right:-40px;
+    }
+  
+  
+  
+  	.pagina {
+        border:1px solid grey;
+        padding:5px;
+        border-radius:5px;
+        position:absolute;
+        bottom:-40px;
+        right:10px;
+        font-size:12px;
+        font-family: 'Arial';
+    }
+    
+    .pagina .cifra {
+    	color:blue;
+        text-decoration:underline;
+    }
+  
+  	.anunturi .pagina {bottom:10px;}
+  
+  
+  
+  
+  
+  
+	/* BANDA  */
+    
+	.banda {
+    	width:100%;
+        height:50px;
+        background-color:var(--color);
+        color:white;
+        text-align:center;
+    }
+    
+    .banda p {
+    	padding:13px;
+    }
+    
+    .banda a {
+    	background-color:white;
+        color:red;
+        padding:5px;
+        border-radius:5px;
+    }
+    
+    .banda a:hover {
+        background-color:var(--color);
+        color:white;
+    }
+    
+    #reducere {
+    	float:left;
+    }
+    
+    
+    #central {
+    display:inline-block;
+    padding-top:15px;
+    }
+    
+    #icoane {
+    	float:right;
+    }
+    
+    #icoane a {
+    	background-color:transparent;
+        color:white;
+        padding:10px;
+    }
+    
+    
+    #icoane a:hover {
+    	color:black;
+    }
+    
+
+    
+    
+    
+	/* NAV  */
+    
+    nav {
+    	text-align:center;
+        padding-top:50px;
+        position:relative;
+        padding-bottom:50px;
+        z-index:1;
+    }
+    
+    nav .menu a {
+    position:relative;
+    	color:grey;
+        display:inline-block;
+        padding:30px 20px 0px 20px; 
+    }
+    
+    nav .logo img {
+    	width:auto;
+        max-height:100px;
+    }
+    
+    #dropdown {
+    	position:relative;
+        display:inline-block;
+    }
+    
+    .dropdown {
+    	position:absolute;
+        display:none;
+        background-color:white;
+        width:100%;
+    }
+    
+
+    #dropdown:hover .dropdown {
+    	display:block;
+    }
+
+    #dropdown .dropdown a {
+    	color:black;
+        padding:5px;
+        display:block;
+        text-align:left;
+        left:15px;
+    }
+
+    #dropdown .dropdown a:first-child {
+    	padding-top:10px;
+    }
+    
+    
+	/* MAIN  */
+    
+    .main {
+    	height:600px;
+        width:100%;
+        position:relative;
+    }
+    
+    .main img {
+    	width:100%;
+        object-fit:cover;
+        height:600px;
+        z-index:-2;
+    }
+    
+    .background {
+    	position:absolute;
+    	background-color:black;
+        width:100%;
+        height:100%;
+        left:0px;
+        top:0px;
+        opacity:.2;
+        z-index:-1;
+    }
+    
+    
+    .reclama {
+    	position:absolute;
+        line-height:4px;
+        bottom:20px;
+        text-align:center;
+        color:white;
+        font-size:12px;
+        right:10px;
+        padding:4px;
+    }
+    
+    .reclama p:first-child {
+    	font-weight:bolder;
+    }
+    
+    .cautare {
+    	position:absolute;
+    	top:40%;
+        width:100%;
+        left:0px;
+        text-align:center;
+    }
+    
+    .cautare input {
+    	width:400px;
+		padding:10px;        
+    }
+    
+    .cautare input, .cautare button {
+    	height:40px;
+        
+    }
+    
+    .cautare .row {
+    	padding-top:50px;
+    	width:400px;
+        margin:auto;
+        color:white;
+        font-weight:bolder;
+    }
+    
+    .cautare .row a {
+    	color:white;
+    }
+    
+    .cautare .row i {
+    	font-size:48px;
+        padding-bottom:10px;
+    }
+    
+    
+	/* REVISTA */    
+    
+    
+
+    
+    
+    
+    .revista {
+    	max-width:1000px;
+        margin:auto;
+        position:relative;
+    }
+    
+    .revista .col-md-4 {
+    	padding:0px;
+    }
+    
+    .rubrica {
+    	background-color:white;
+        box-shadow:0px 0px 10px grey;
+        margin:10px;  
+        min-height:300px;
+        
+    }
+    
+    .rubrica img {
+    	width:100%;
+        height:150px;
+        object-fit:cover;
+    }
+    
+    
+    .rubrica a {
+    	color:grey;
+        padding:25px;
+        display:inline-block;
+        font-size:12px;
+    }
+    
+    .rubrica a:hover {
+    	opacity: .6;
+        text-decoration:none;
+    }
+    
+    .backgroundRubrica {
+    	background-color:black;
+        position:absolute;
+       	opacity:.4;
+        height:150px;
+        right:10px;
+        left:10px;
+    }
+    
+    .titlu {
+    	position:absolute;
+    	font-size:32px;
+        line-height:30px;
+        padding:50px 20px 0px 40px;
+        height:150px;
+        color:white;
+        width:100%;
+        padding-left:10px;
+    }
+    
+    .data {
+    	color:black;
+    }
+    
+    .cap {
+    	color:white;
+        background-color:green;
+        padding:5px;
+        border-radius:5px;
+    }
+    
+    
+	/* ANUNTURI */    
+    
+    .anunturiFundal {
+    	width:100%;
+        height:auto;
+        background-color:lightgrey;
+    }
+    
+.anunturi {
+		padding:50px 0px;
+    	max-width:1000px;
+        margin:auto;
+        position:relative;
+        font-size:12px;
+    }    
+    
+    .pret, .zona {
+    	color:red;
+        font-weight:bolder;
+        font-size:14px;
+    }
+    
+    .anunt:not(:last-child) {
+    	border-right:.5px solid grey;
+    	}
+    
+    
+    
+    
+ 	/* RESPONSIVE */     
+    
+    
+    @media screen and (max-width:768px) {
+    
+    	.arrows {display:none;}
+        .pagina {display:none;}
+    
+    
+    
+    	.banda #central {display:none;}
+        
+        .banda {font-size:12px;padding-top:2px;}
+        
+        
+    
+    	nav .menu:first-child {display:none;}
+    
+    	nav .logo {text-align:center;}
+        
+        nav .logo img {height:auto; max-width:300px;}
+        
+        
+        
+        
+        .cautare input {width:90%;margin-bottom:10px;text-align:center;}
+        
+        .cautare .row {display:none;}
+        
+        
+        .reclama {width:100%;}
+        
+        
+        
+        
+        
+        .rubrica {
+        	margin: 20px;
+        }
+        
+        .backgroundRubrica {
+        right:20px;
+        left:20px;        
+        }
+    	
+        
+        .anunt {
+        	padding:0px 20px 40px 20px;
+        }
+        
+        
+ 
+    } 
+    
+    
+    
+    
+  </style>
+  
+</head>
+<body>
+<div class="banda">
+	<p id="reducere"><a href="">Introdu un anunt</a></p>
+    <span id="central"><strong>50% reducere</strong> pentru oferta de mare publicitate.</span>
+    <p id="icoane">
+    	<a href=""><i class='fas fa-user'></i></a>
+        <a href=""><i class='far fa-envelope'></i></a>
+        <a href=""><i class='fas fa-phone'></i></a>
+        <a href=""><i class='fab fa-facebook-f'></i></a>
+    </p>
+</div>
+
+<nav class="container-fluid">
+	<div class="row">
+		<div class="col-md menu">
+        	<a href="">Home</a>
+            <div id="dropdown">
+            	<a href="">
+                	<i class='fas fa-user'></i>
+                    Contul tau
+                    <i class='fas fa-angle-down'></i>
+                </a>
+            	<div class="dropdown">
+                	<a href="">Login</a>
+                    <a href="">Register</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md logo">
+        	<img src="https://lh3.googleusercontent.com/proxy/G3H6GTrBZQeRmGUJ1BeZ7SLRqYttsTNcRl2a1tT58Z24Y1ATt6p-KnLArSvqYl7vgO8yQxeZ-FFdfUzAsziyR0zd7ZSeypO99Smcxrea9KbBtFVvqg7Gog">
+        </div>
+        <div class="col-md menu">
+        	<div id="dropdown">
+        		<a href="">
+                	Anunturi
+                    <i class='fas fa-angle-down'></i>
+                </a>
+            	<div class="dropdown">
+                	<a href="">Imobiliare</a>
+                    <a href="">Auto</a>
+                    <a href="">Job</a>
+                    <a href="">Servicii</a>
+                </div>                
+            </div>
+            
+            <a href="">Revista</a>
+            
+        </div>
+    </div>
+</nav>
+
+<div class="main">
+
+	<div class="reclama">
+    	<p id="linia1">Marius Photography</p>
+        <p id="linia2">Imagini profesionale pentru orice ocazie</p>
+        <a href="">Contacteaza fotograful <i class='fas fa-external-link-alt'></i></a>
+    </div>
+	
+    <div class="cautare container-fluid">
+    	<form>
+    		<input type="text" placeholder="Cauta un anunt aici...">
+        	<button><i class='fas fa-search'></i> Cautare</button>
+        </form>
+        <div class="row">
+        	<div class="col-md">
+
+					<i class='fas fa-home'></i>            
+            		<p>Imobiliare</p>
+              
+            </div>
+        	<div class="col-md">
+            	<a href="">
+					<i class='fas fa-car'></i>            
+            		<p>Auto</p>
+                </a>    
+            </div>
+        	<div class="col-md">
+            	<a href="">
+            		<i class='fas fa-user-tie'></i>
+            		<p>Jobs</p>
+                </a>    
+            </div>            
+        </div>
+        
+    </div>
+
+	<div class="background"></div>
+	<img src="https://images.pexels.com/photos/1535244/pexels-photo-1535244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+</div>
+
+
+
+
+
+
+<h1>Cele mai noi articole</h1>
+
+<div class="revista container-fluid">
+<div class="arrows">
+	<i class='fas fa-chevron-right arrowRight'></i>	
+	<i class='fas fa-chevron-left arrowLeft'></i>	    
+</div>
+	<div class="row">
+    	<div class="col-md-4">
+    		<div class="rubrica">
+            	<div class="backgroundRubrica"></div>        
+            	<p class="titlu">Sex sau gogosi?</p>            
+        		<img src="https://images.pexels.com/photos/414032/pexels-photo-414032.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        		<a href="">
+            		<p><span class="data">11.04.2020</span> <span class="cap">Cu Loredana la cafea</span></p>
+            		<p class="introducere">
+E o intrebare veche, dar daca ai putea alege un singur lucru, care dintre ele ar fi, ce te-ar atrage mai mult, unde te-ai situa cu dorinta, sexul sau gogosile?
+            		</p>
+            	</a>
+       	 </div>
+    </div>    
+      
+    	<div class="col-md-4">
+    		<div class="rubrica">
+            	<div class="backgroundRubrica"></div>        
+            	<p class="titlu">Litoralul romanesc</p>            
+        		<img src="https://lh4.googleusercontent.com/proxy/LQ_Gfa-bEr-K2ljyBXfWr2Yowfd0DMotWZNuKRDUzuf913xG50Bm_CurlslkXb0auaX2HxsU_VQPGvSrZLR0f03SvOWch8iS1vEXdkm2ClNEz55LnYKIfvQNa5fi5bzB9Qi1">
+        		<a href="">
+            		<p><span class="data">11.04.2020</span> <span class="cap" style="background-color:red;">Vacante</span></p>
+            		<p class="introducere">
+Litoralul românesc Cu o întindere de peste 240 km, litoralul de la Marea Neagră se remarcă prin nisipul n și plajele largi, unele dintre ele încă sălbatice și pustii.
+            		</p>
+            	</a>
+       	 </div>
+         
+
+         
+    </div>     
+    
+    
+    	<div class="col-md-4">
+    		<div class="rubrica">
+            	<div class="backgroundRubrica"></div>        
+            	<p class="titlu">Tocăniţă cremoasă de vită cu cartofi</p>            
+        		<img src="https://i.pinimg.com/originals/40/ba/7c/40ba7ca7b2505249410cf42d8e9c6df9.jpg">
+        		<a href="">
+            		<p><span class="data">11.04.2020</span> <span class="cap" style="background-color:blue;">Retete de la cititori</span></p>
+            		<p class="introducere">
+Este si sățioasă, sănătoasă, gustoasă și ușor de făcut. O alegere clasică pentru o masă în familie, perfectă pentru serile reci de toamnă și iarnă.
+            		</p>
+            	</a>
+       	 </div>
+    </div>      
+         <div class="pagina">
+         	Pagina <span class="cifra">1</span> din <span class="cifra">131</span>
+         </div>
+     
+ </div>
+</div>
+
+
+<h1>Cele mai noi anunturi</h1>
+
+<div class="anunturiFundal">
+	<div class="anunturi container-fluid">
+<div class="arrows">
+	<i class='fas fa-chevron-right arrowRight'></i>	
+	<i class='fas fa-chevron-left arrowLeft'></i>	    
+</div>    
+    	<div class="row">
+        
+        	<div class="col-md-4 anunt">
+            	<div class="cap"><span><strong>Imobiliare</strong></span> | <span>Inchirieri</div>
+                <p class="data">Adaugat la data de 11.04.2020</p>
+            		<p class="introducere">
+Inchiriez o camera in zona West Ham, cu baie si WC, plata saptamanal, pat king-size, pereche sau singur.</p>
+			<p>
+            	Pret: <span class="pret">£<span>455/saptamana</span></span>
+                |
+                Zona: <span class="zona">West Ham</span> 
+            </p>
+            <a href="">Vezi toate anunturile din <span>Imobiliare</span> >>> </a>
+            </div>
+            
+        	<div class="col-md-4 anunt">
+            	<div class="cap"><span><strong>Auto</strong></span> | <span>Vanzari</div>
+                <p class="data">Adaugat la data de 11.04.2020</p>
+            		<p class="introducere">
+Vand Toyota, an 2012, stare buna, 25.000 mile, MOT pana in anul 2021, geamuri electrice, placute frane schimbate, roti de rezerva, cutie de viteze automata. Pret discutabil.</p>
+			<p>
+            	Pret: <span class="pret">£<span>1200</span></span>
+                |
+                Zona: <span class="zona">London</span> 
+            </p>
+            <a href="">Vezi toate anunturile din <span>Auto</span> >>> </a>
+            </div>   
+            
+        	<div class="col-md-4 anunt">
+            	<div class="cap"><span><strong>Jobs</strong></span> | <span>Oferte</div>
+                <p class="data">Adaugat la data de 11.04.2020</p>
+            		<p class="introducere">
+Caut fata pentru bar Cambridge, plata saptamanal, limba engleza laptamanal, limba engleza laptamanal, limba engleza la nivel conversational.</p>
+			<p>
+            	Pret: <span class="pret">£<span>1200/luna</span></span>
+                |
+                Zona: <span class="zona">Cambridge</span> 
+            </p>
+            <a href="">Vezi toate anunturile din <span>Jobs</span> >>> </a>
+            </div>               
+        </div>
+        
+         <div class="pagina">
+         	Pagina <span class="cifra">1</span> din <span class="cifra">43</span>
+         </div>
+         
+    </div>
+	
+</div>
+
+
+<h1>Publicitate</h1>
+<div class="publicitate" style="height:600px;"></div>
+
+</body>
+</html>
